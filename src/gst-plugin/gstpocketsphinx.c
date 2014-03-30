@@ -605,7 +605,6 @@ gst_pocketsphinx_get_property(GObject * object, guint prop_id,
 	arr = g_value_array_new(1);
         ps_nbest_t *ps_nbest_list = ps_nbest(ps->ps, 0, -1, NULL, NULL);   
         if (ps_nbest_list) {
-            ps_nbest_list = ps_nbest_next(ps_nbest_list);
             while ((i < ps->n_best_size) && (ps_nbest_list != NULL)) {
                 GValue value1 = { 0 };
                 g_value_init (&value1, G_TYPE_STRING);

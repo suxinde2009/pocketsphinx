@@ -1128,7 +1128,7 @@ ps_nbest(ps_decoder_t *ps, int sf, int ef,
     w2 = ctx2 ? dict_wordid(ps_search_dict(ps->search), ctx2) : -1;
     nbest = ps_astar_start(dag, lmset, lwf, sf, ef, w1, w2);
 
-    return (ps_nbest_t *)nbest;
+    return ps_nbest_next((ps_nbest_t *) nbest);
 }
 
 void
