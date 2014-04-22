@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Pocketsphinx : PocketSphinx is a lightweight speech recognition engine, specifically tuned for handheld and mobile devices, though it works equally well on the desktop" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Pocketsphinx</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/cmusphinx/pocketsphinx">View on GitHub</a>
+
+          <h1 id="project_title">Pocketsphinx</h1>
+          <h2 id="project_tagline">PocketSphinx is a lightweight speech recognition engine, specifically tuned for handheld and mobile devices, though it works equally well on the desktop</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/cmusphinx/pocketsphinx/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/cmusphinx/pocketsphinx/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>PocketSphinx 5prealpha</p>
+
+<p>This is PocketSphinx, one of Carnegie Mellon University's open source
+large vocabulary, speaker-independent continuous speech recognition
+engine. Please see the LICENSE file for terms of use.</p>
+
+<p>THIS IS A RESEARCH SYSTEM.  This is also an early release of a
+research system.  We know the APIs and function names are likely to
+change, and that several tools need to be made available to make this
+all complete.  With your help and contributions, this can progress in
+response to the needs and patches provided.</p>
+
+<p>To compile:</p>
+
+<p>First, you <em>must</em> have SphinxBase, which you can download from
+<a href="http://cmusphinx.sourceforge.net/">http://cmusphinx.sourceforge.net/</a>.  You should download and unpack it to
+the same parent directory as PocketSphinx, so that the configure script
+and project files can find it. On Windows, you will need to rename
+'sphinxbase-X.Y' (where X.Y is the SphinxBase version number) to simply
+'sphinxbase' for this to work.</p>
+
+<p>In a unix-like environment (such as linux, solaris etc):</p>
+
+<ul>
+<li><p>build and optionally install SphinxBase.  If you want to use
+fixed-point arithmetic, you <em>must</em> configure SphinxBase with the
+--enable-fixed option.</p></li>
+<li><p>if you downloaded directly from the CVS repository, you need to do
+this at least once to generate the "configure" file:</p></li>
+</ul><p>% ./autogen.sh</p>
+
+<ul>
+<li>if you downloaded the release version, or ran "autogen.sh" at least
+once, then compile and install:</li>
+</ul><p>% ./configure
+% make clean all
+% make test
+% make install</p>
+
+<p>XCode Installation (for iPhone):</p>
+
+<p>Sphinxbase uses the standard unix autogen system, and there's a script
+included, 'build_for_iphone.sh' that will setup configure to create
+binaries that are XCode friendly.</p>
+
+<p>1) ./autogen.sh
+2) ./build_for_iphone.sh simulator
+3) ./build_for_iphone.sh device</p>
+
+<p>Then in XCode, open your project info, and for 'All Configurations', and
+set:</p>
+
+<p>'Header Search Paths' = "$(HOME)$(SDK_DIR)/include/pocketsphinx"
+'Library Search Paths' = "$(HOME)$(SDK_DIR)/lib"
+'Other Linker Flags' = "-lpocketsphinx"</p>
+
+<p>In MS Windows (TM), under MS Visual Studio 2010 (or newer - we test
+with Visual C++ 2010 Express):</p>
+
+<ul>
+<li><p>load sphinxbase.sln located in sphinxbase directory</p></li>
+<li><p>compile all the projects in SphinxBase (from sphinxbase.sln)</p></li>
+<li><p>load pocketsphinx.sln in pocketsphinx directory</p></li>
+<li><p>compile all the projects in PocketSphinx</p></li>
+</ul><p>MS Visual Studio will build the executables under .\bin\Release or
+.\bin\Debug (depending on the version you choose on MS Visual Studio),
+and the libraries under .\lib\Release or .\lib\Build.</p>
+
+<p>Test scripts are forthcoming for Windows.</p>
+
+<p>For up-to-date information, see <a href="http://cmusphinx.sourceforge.net/">http://cmusphinx.sourceforge.net/</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Pocketsphinx maintained by <a href="https://github.com/cmusphinx">cmusphinx</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
